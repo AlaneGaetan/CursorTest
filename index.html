@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <main class="calculator" role="application" aria-label="Scientific Calculator">
+        <header class="calc-header">
+            <h1>Scientific Calculator</h1>
+            <div class="mode-toggle" role="group" aria-label="Angle mode">
+                <button id="deg-btn" class="mode-btn active" data-mode="DEG" aria-pressed="true">DEG</button>
+                <button id="rad-btn" class="mode-btn" data-mode="RAD" aria-pressed="false">RAD</button>
+            </div>
+        </header>
+
+        <section class="display" aria-live="polite">
+            <div id="expression" class="expression" aria-label="Expression"></div>
+            <div id="result" class="result" aria-label="Result">0</div>
+        </section>
+
+        <section class="history-panel" aria-label="History">
+            <div class="history-header">
+                <span>History</span>
+                <button id="clear-history" class="link-btn" type="button">Clear</button>
+            </div>
+            <ul id="history-list" class="history-list" aria-live="polite"></ul>
+        </section>
+
+        <section class="scientific-keys" aria-label="Scientific functions">
+            <button class="key fn" data-action="func" data-value="sin(">sin</button>
+            <button class="key fn" data-action="func" data-value="cos(">cos</button>
+            <button class="key fn" data-action="func" data-value="tan(">tan</button>
+            <button class="key fn" data-action="func" data-value="ln(">ln</button>
+            <button class="key fn" data-action="func" data-value="log(">log</button>
+
+            <button class="key fn" data-action="func" data-value="asin(">sin⁻¹</button>
+            <button class="key fn" data-action="func" data-value="acos(">cos⁻¹</button>
+            <button class="key fn" data-action="func" data-value="atan(">tan⁻¹</button>
+            <button class="key fn" data-action="func" data-value="sqrt(">√</button>
+            <button class="key fn" data-action="op" data-value="^">xʸ</button>
+
+            <button class="key fn" data-action="literal" data-value="pi" data-display="π">π</button>
+            <button class="key fn" data-action="literal" data-value="e">e</button>
+            <button class="key fn" data-action="op" data-value="^2" data-display="²">x²</button>
+            <button class="key fn" data-action="op" data-value="!">x!</button>
+            <button class="key fn" data-action="op" data-value="%">%</button>
+        </section>
+
+        <section class="main-keys" aria-label="Main keypad">
+            <button class="key util" data-action="clear">AC</button>
+            <button class="key util" data-action="delete">DEL</button>
+            <button class="key util" data-action="literal" data-value="(">(</button>
+            <button class="key util" data-action="literal" data-value=")">)</button>
+
+            <button class="key num" data-action="digit" data-value="7">7</button>
+            <button class="key num" data-action="digit" data-value="8">8</button>
+            <button class="key num" data-action="digit" data-value="9">9</button>
+            <button class="key op" data-action="op" data-value="/">÷</button>
+
+            <button class="key num" data-action="digit" data-value="4">4</button>
+            <button class="key num" data-action="digit" data-value="5">5</button>
+            <button class="key num" data-action="digit" data-value="6">6</button>
+            <button class="key op" data-action="op" data-value="*">×</button>
+
+            <button class="key num" data-action="digit" data-value="1">1</button>
+            <button class="key num" data-action="digit" data-value="2">2</button>
+            <button class="key num" data-action="digit" data-value="3">3</button>
+            <button class="key op" data-action="op" data-value="-">−</button>
+
+            <button class="key num" data-action="digit" data-value="0">0</button>
+            <button class="key num" data-action="literal" data-value=".">.</button>
+            <button class="key op" data-action="op" data-value="+/-">±</button>
+            <button class="key op" data-action="op" data-value="+">+</button>
+
+            <button class="key equals" data-action="equals">=</button>
+        </section>
+
+        <footer class="calc-footer">
+            <span>Keyboard supported · Enter = · Backspace deletes · Esc clears</span>
+        </footer>
+    </main>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
